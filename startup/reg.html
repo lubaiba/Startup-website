@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="reg.css">
+
+</head>
+<body>
+  
+ <div class="bgimage">
+   <div class="navbar">
+      <nav>
+        <img class="logo" src="logo-big.png">
+                <a class="home" href="#">HOME</a>
+        <a class="about" href="#">ABOUT</a>
+        <a class="portfolio" href="#">PORTFOLIO</a>
+        <a class="services" href="#">SERVICES</a>
+        <a class="contact" href="#">CONTACT</a>
+        </nav></div>
+ </div>
+ <center><a href="Startup.html"><button onclick="goBack()">Go back</button></a></center>
+<table>
+
+  <form action="/action_page.php">
+<tr>
+  <td>&nbsp&nbsp<label>Name*</label></td>
+  <td><input type="text" name="name" size="16" maxlength="12"></td>
+  <td><input type="text" name="name" size="16" maxlength="12"></td>&nbsp&nbsp
+</tr>
+<tr>
+  <td>&nbsp&nbsp<label for="email">Email ID*</label></td>
+  <td><input type="text" name="name" size="16"></td>
+</tr>
+<tr>
+  <td>&nbsp&nbsp<label for="contact">Contact &nbsp&nbspNo</label></td>
+  <td><input type="text" name="name" size="16"></td>
+</tr>
+<tr>
+  <td>&nbsp&nbsp<label>Profession</label></td>
+   <td><input type="radio" name="inv" onclick="openForm()"><label>Investors</label></td>
+   <td><input type="radio" name="inv" onclick="openForm2()"><label>Entrepreneurs</label></td></tr>
+
+     <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form2">
+    <h1>Login form of investors</h1>
+<label for="text"><b>Designation:</b></label><input type="text" placeholder="Enter Designation" name="Designation" required>
+<br>
+    <label for="text"><b>Organization:</b></label>
+    <input type="text" placeholder="Enter Organization" name="Organization" required><br>
+    <label for="text"><b>Linked in URL</b></label>
+    <input type="text" placeholder="Enter URL" name="psw" required>
+<br>
+<label>Have you invested in any of the startup ?</label>
+<input type="radio" name="yes" value="yes">
+<label>Yes</label>
+<input type="radio" name="yes" value="no">
+<label>No</label>
+<br>
+    <button type="submit" class="btn" onclick="openWin1()">&nbsp;Login</button><br><br>
+    <button type="button" class="btn cancel" onclick="closeForm()">&nbsp;Continue</button>
+  </form>
+</div>
+       
+    
+   <div class="form-popup2" id="myForm2">
+  <form action="/action_page.php" class="form2">
+    <h1>Login form of entrepreneurs</h1>
+<label for="email"><b>Company Name:</b></label><input type="text" placeholder="Enter company name" required>
+<br>
+    <label for="psw"><b>Company Website:</b></label>
+    <input type="text" placeholder="Enter website" name="psw" required><br>
+    <label for="psw"><b>Describe your product or service:</b></label>
+    <textarea rows="10" cols="32"></textarea>
+<br>
+<label>Startup Stage</label>&nbsp&nbsp
+      <select><option value="level I">Level I</option>
+          <option value="level I">Level II</option>
+          <option value="level I">Level III</option>
+          </select><br>
+      <label>Location</label>&nbsp&nbsp
+      <select><option value="State">State</option>
+          <option value="level I">Level II</option>
+          <option value="level I">Level III</option>
+          </select>&nbsp&nbsp;<select><option value="City">City</option>
+          <option value="level I">Level II</option>
+          <option value="level I">Level III</option>
+          </select><br>
+<label>Have you raised any funds ?</label>
+<input type="radio" name="yes" value="yes">
+<label>Yes</label>
+<input type="radio" name="yes" value="no">
+<label>No</label>
+<br>
+<label for="text"><b>Linked in URL</b></label>
+    <input type="text" placeholder="Enter URL" name="psw" required>
+<br>
+
+<button type="submit" class="btn" onclick="openWin1()">&nbsp;Login</button><br><br>
+    <button type="button" class="btn cancel" onclick="closeForm2()">&nbsp;Continue</button>
+  </form>
+</div>
+<tr>
+<td></td><td>
+<input class="button1" type="SUBMIT"  value="SUBMIT" onclick="openWin1()"></td></tr>
+</form>
+</table>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+function openForm2() {
+  document.getElementById("myForm2").style.display = "block";
+}
+
+function closeForm2() {
+  document.getElementById("myForm2").style.display = "none";
+}
+function openWin1() {
+  window.open("events2.html");
+}
+</script>
+
+</body>
+
+</html>
